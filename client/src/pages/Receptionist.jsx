@@ -196,7 +196,7 @@ export default function Receptionist() {
               disabled={loading}
               style={{ marginTop: "4px" }}
             >
-              {loading ? "⏳ Adding…" : "➕ Assign Token →"}
+              {loading ? "⏳ Adding…" : "Assign Token"}
             </button>
           </form>
         </section>
@@ -222,7 +222,7 @@ export default function Receptionist() {
             onClick={callNext}
             className="btn btn-accent full-width mt-1"
           >
-            ➡️ Call Next →
+            Call Next
           </button>
 
           <div className="divider" />
@@ -264,7 +264,7 @@ export default function Receptionist() {
         </div>
 
         {waiting.length === 0 ? (
-          <p className="empty-state">🎉 No patients waiting — add one above.</p>
+          <p className="empty-state">No patients waiting — add one above.</p>
         ) : (
           <div className="table-wrap">
             <table>

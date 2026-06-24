@@ -35,6 +35,20 @@ class QueueService {
     try {
       console.log("📝 Adding patient with data:", patientData);
 
+    if (patientData.phone && patientData.phone.trim()) {
+      const phoneNumber = patientData.phone.trim();
+      const existingPatient = await Patient.findOne({
+        phone: phoneNumber,
+        status: { $in: ["waiting", "serving"] }
+      });
+      
+      if (existingPatient) {
+        throw new Error(
+          `Phone ${phoneNumber} is already in queue (Token #${existingPatient.token})`
+        );
+      }
+    }
+
       const token = await Patient.getNextToken();
       console.log(`✅ Got token: ${token}`);
 
