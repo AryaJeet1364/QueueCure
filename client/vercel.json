@@ -4,8 +4,5 @@
   "outputDirectory": "dist",
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
-  ],
-  "env": {
-    "VITE_API_URL": "https://queue-cure-backend.onrender.com"
-  }
+  ]
 }
