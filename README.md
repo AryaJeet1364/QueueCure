@@ -1,5 +1,25 @@
 # QueueCure
 
+> **Live digital queue manager for neighbourhood clinics**,  built for Queue Cure '26 hackathon on Wooble.
+ 
+🔗 **Live Demo:** [queue-cure-bay.vercel.app](https://queue-cure-bay.vercel.app)  
+📦 **Backend:** [queuecure-77y9.onrender.com](https://queuecure-77y9.onrender.com)
+ 
+---
+ 
+## The Problem
+ 
+76% of India's 1.5 million clinics run on paper token slips and shouting. Patients wait 2–3 hours with zero visibility into when they'll be called. Receptionists manage everything from memory.
+ 
+## The Solution
+ 
+A real-time digital queue system with two screens:
+ 
+- **Receptionist Panel** -> add patients, call next token, set consultation time
+- **Patient Waiting Room** -> see current token, position in queue, estimated wait time
+
+Both screens sync live the moment "Call Next" is clicked, no refresh needed.
+
 A real-time clinic queue management system built with React, Node.js, Socket.IO, and MongoDB. It gives a **Receptionist** view to manage the queue and a **Waiting Room** display that updates live for patients.
 
 ---
