@@ -98,7 +98,7 @@ export default function Receptionist() {
       if (data.data?.currentToken) {
         toast.success(`🔔 Calling Token #${data.data.currentToken}`);
       } else {
-        toast("🏁 Queue is empty", { icon: "ℹ️" });
+        toast("Queue is empty", { icon: "ℹ️" });
       }
     } catch (err) {
       const errorMsg = err.userMessage || err.response?.data?.message || "Failed to call next";
@@ -129,7 +129,7 @@ export default function Receptionist() {
     if (!confirm("⚠️ Reset entire queue? This cannot be undone.")) return;
     try {
       await api.delete("/queue/reset");
-      toast.success("🔄 Queue reset successfully");
+      toast.success("✅ Queue reset successfully");
     } catch (err) {
       const errorMsg = err.userMessage || err.response?.data?.message || "Failed to reset queue";
       toast.error(`❌ ${errorMsg}`);
@@ -247,7 +247,7 @@ export default function Receptionist() {
             onClick={resetQueue}
             className="btn btn-danger full-width mt-2"
           >
-            🔄 Reset Queue (End of Day)
+            Reset Queue (End of Day)
           </button>
         </section>
       </div>

@@ -79,7 +79,7 @@ export default function WaitingRoom() {
 
         {waiting.length === 0 ? (
           <div className="queue-empty">
-            <p className="queue-empty-text">🎉 Queue is clear</p>
+            <p className="queue-empty-text">Queue is clear</p>
           </div>
         ) : (
           <div className="queue-list">
